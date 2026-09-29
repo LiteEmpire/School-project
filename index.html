@@ -1,38 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-table,tr,td,th
-{
-border:2px solid red;
-border-collapse:collapse;
-background-color:yellow;
-width:400px;
-height:100px;
-}
-th
-{background-color:pink;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>Student Hub | Niranjan</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #172033; background: #f4f7fb; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #2563eb, #4f46e5); color: white; padding: 22px 7%; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 18px rgba(15,23,42,.15); }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { font-size: 1.35rem; font-weight: 800; }
+    nav a { color: white; text-decoration: none; margin-left: 18px; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    .hero { min-height: 72vh; display: grid; place-items: center; text-align: center; padding: 70px 7%; background: radial-gradient(circle at top, #dbeafe, #f4f7fb 55%); }
+    .hero-inner { max-width: 850px; }
+    .badge { display: inline-block; padding: 7px 14px; border-radius: 999px; background: #dbeafe; color: #1d4ed8; font-weight: 700; font-size: .9rem; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.05; margin: 18px 0; }
+    .hero p { font-size: 1.15rem; color: #526078; max-width: 650px; margin: 0 auto 28px; }
+    .button { display: inline-block; background: #2563eb; color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; box-shadow: 0 8px 20px rgba(37,99,235,.25); }
+    .button:hover { background: #1d4ed8; }
+    section { padding: 70px 7%; max-width: 1100px; margin: auto; }
+    h2 { font-size: 2rem; margin-top: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: white; padding: 25px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 8px 25px rgba(15,23,42,.06); }
+    .icon { font-size: 2rem; }
+    .student { background: #0f172a; color: white; border-radius: 20px; padding: 32px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 420px; }
+    th, td { padding: 15px; text-align: left; border-bottom: 1px solid #334155; }
+    th { color: #93c5fd; }
+    footer { text-align: center; padding: 30px 7%; color: #64748b; }
+    @media (max-width: 750px) { nav { flex-direction: column; } nav a { margin: 0 8px; } .cards { grid-template-columns: 1fr; } }
+  </style>
 </head>
-
 <body>
-<table>
-<caption> Student Details(Niranjan) </caption>
-<tr>
-<th>Name</th>
-<th>Class</th>
-<th>Age</th>
-</tr>
-<tr>
-<td>Niranjan</td>
-<td>7</td>
-<td>13</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
+  <header>
+    <nav>
+      <div class="brand">🎓 Student Hub</div>
+      <div><a href="#home">Home</a><a href="#about">About</a><a href="#details">Details</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <span class="badge">School Project</span>
+        <h1>Welcome to My Student Hub</h1>
+        <p>A simple, modern student website built with HTML and CSS.</p>
+        <a class="button" href="#details">View Student Details</a>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About This Project</h2>
+      <div class="cards">
+        <article class="card"><div class="icon">📚</div><h3>Learning</h3><p>A place to present school information in a clear and organized way.</p></article>
+        <article class="card"><div class="icon">💻</div><h3>Technology</h3><p>Built using simple HTML and CSS without external frameworks.</p></article>
+        <article class="card"><div class="icon">🚀</div><h3>Future Ready</h3><p>The design can be expanded with projects, subjects, achievements, and more.</p></article>
+      </div>
+    </section>
+    <section id="details">
+      <h2>Student Details</h2>
+      <div class="student">
+        <table><tr><th>Name</th><th>Class</th><th>Age</th></tr><tr><td>Niranjan</td><td>7</td><td>13</td></tr></table>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 Student Hub · School Project</footer>
 </body>
 </html>
